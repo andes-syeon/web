@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>main page</title>
+    <script type="text/javascript" src="/js/home.js?2"></script>
 </head>
 <body style="margin: 5% 10%; ">
     <div class = "top_header">
@@ -24,7 +26,7 @@
         <div class = "title1" style="text-align:center; font-size: 40px">
             CATEGORY
         </div>
-        <div class = "parent" style=" margin:3%; overflow: hidden; margin-left: auto; margin-right: auto; ">
+        <div class = "parent" style=" margin:3%; overflow: hidden; margin-left: auto; margin-right: auto; " onclick="$home.move2Category('vegan')" onmouseover="" style="cursor: pointer;">
             <div class = "category1" style= "float:left; margin-left: 10px; margin-right: 10px; width: 200px; height: 370px; border: 1px solid darkgrey; position:relative; ">
                 <div class = "category_box">
                     <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
