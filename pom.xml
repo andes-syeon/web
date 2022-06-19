@@ -12,6 +12,7 @@
     <artifactId>alpha</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
+
     <name>alpha</name>
     <description>alpha</description>
     <properties>
@@ -113,6 +114,14 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
                 </configuration>
             </plugin>
         </plugins>
