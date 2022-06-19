@@ -61,7 +61,7 @@
                 <div class = "contentBox_parent">
                     <div class = "contentBox_category" onclick="location.href='/category/비건'">
                         <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                            <img src = "/image/vegan.png" alt="" style = "max-width: 100%;">
                             <div class = "category_name" >
                                 <p>비건</p>
                             </div>
@@ -70,7 +70,7 @@
 
                     <div class = "contentBox_category" onclick="location.href='/category/유아동반'">
                         <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                            <img src = "/image/baby.png" alt="" style = "max-width: 100%;">
                             <div class = "category_name" >
                                 <p>유아 동반</p>
                             </div>
@@ -79,7 +79,7 @@
 
                     <div class = "contentBox_category" onclick="location.href='/category/독립공간'">
                         <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                            <img src = "/image/dinner.png" alt="" style = "max-width: 100%;">
                             <div class = "category_name">
                                 <p>독립공간</p>
                             </div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class = "contentBox_category" onclick="location.href='/category/반려동물동반'">
                         <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                            <img src = "/image/dog.png" alt="" style = "max-width: 100%;">
                             <div class = "category_name">
                                 <p>반려동물 동반</p>
                             </div>
@@ -104,7 +104,7 @@
                     <c:forEach var="restaurant" items="${top4ReviewRestaurants}">
                         <div class = "contentBox_category"  onclick="location.href='/restaurant/${restaurant.id}'">
                             <div class = "category_box">
-                                <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                                <img src = "/image/logo.png" alt="" style = "max-width: 100%;">
                                 <div class = "category_name" >
                                     <p>${restaurant.name}</p>
                                 </div>
@@ -121,7 +121,7 @@
                     <c:forEach var="restaurant" items="${top4StarRestaurants}">
                         <div class = "contentBox_category" onclick="location.href='/restaurant/${restaurant.id}'">
                             <div class = "category_box">
-                                <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                                <img src = "/image/logo.png" alt="" style = "max-width: 100%;">
                                 <div class = "category_name" >
                                     <p>${restaurant.name}</p>
                                 </div>
