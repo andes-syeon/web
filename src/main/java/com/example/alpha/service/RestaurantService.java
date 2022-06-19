@@ -38,4 +38,14 @@ public class RestaurantService {
             return ResultCode.DBError.result();
         }
     }
+
+    public Result<List<Restaurant>> getTop4Restaurants() {
+        try {
+            List<Restaurant> restaurants = restaurantRepository.findTop4ByOrderByStarDesc();
+            return ResultCode.Success.result(restaurants);
+        } catch (Exception e) {
+            return ResultCode.DBError.result();
+        }
+    }
+
 }

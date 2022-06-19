@@ -12,6 +12,7 @@ public class Result<T> {
         this.resultCode = resultCode;
     }
 
+    @JsonIgnore
     public T getResultObject() {
         return resultObject;
     }
@@ -22,6 +23,10 @@ public class Result<T> {
 
     public String getRtnMsg() {
         return resultCode.getRtnMsg();
+    }
+
+    public T getRtnObj() {
+        return resultObject;
     }
 
     @JsonIgnore
