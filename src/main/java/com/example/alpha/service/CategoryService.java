@@ -37,4 +37,17 @@ public class CategoryService {
             return ResultCode.DBError.result();
         }
     }
+
+    public Result<Category> getCategory(String name) {
+        try {
+            List<Category> categories = categoryRepository.findCategoriesByName(name);
+            if (categories.isEmpty()) {
+                return ResultCode.NOT_EXISTS_CATEGORY.result();
+            }
+            Category category = categories.get(0);
+            return ResultCode.Success.result(category);
+        } catch (Exception e) {
+            return ResultCode.DBError.result();
+        }
+    }
 }

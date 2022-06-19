@@ -11,9 +11,15 @@ public enum ResultCode {
 
     //2000 번대 식당
     NOT_EXISTS_RESTAURANT(2000, "존재하지 않는 식당입니다."),
+    NOT_EXISTS_RESTAURANT_IN_CATEGORY(2001, "해당 카테고리에 식당이 존재하지 않습니다."),
 
     //3000 번대 리뷰
     NOT_EXISTS_REVIEW(3000, "존재하지 않는 리뷰입니다."),
+
+    //4000 번대 카테고리
+    NOT_EXISTS_CATEGORY(4000, "존재하지 않는 카테고리입니다."),
+
+
 
     DBError(9998, "DB 오류입니다."),
     ETCError(9999, "기타 오류입니다.");
