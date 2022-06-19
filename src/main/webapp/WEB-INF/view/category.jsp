@@ -22,7 +22,7 @@
                     <li><a href="/category/비건">비건</a></li>
                     <li><a href="/category/유아동반">유아동반</a></li>
                     <li><a href="/category/반려동물동반">반려동물동반</a></li>
-                    <li><a href="/category/독립룸">독립룸</a></li>
+                    <li><a href="/category/독립공간">독립룸</a></li>
                 </ul>
             </nav>
         </div>
