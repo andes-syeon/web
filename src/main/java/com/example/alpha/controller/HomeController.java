@@ -30,18 +30,16 @@ public class HomeController {
             for (Restaurant restaurant : resultRestaurants.getRtnObj()) {
                 System.out.println("restaurant : " + restaurant);
             }
-            model.addAttribute("restaurants", resultRestaurants.getResultObject());
+            model.addAttribute("top4StarRestaurants", resultRestaurants.getResultObject());
         }
 
-        Result<Map<Restaurant, Long>> resultReview = reviewService.getTop4Reviews();
-       /* if (resultReview.isSuccess()) {
-            Map<Restaurant, Long> reviewMap = resultReview.getRtnObj();
-
-            for (Restaurant restaurant : reviewMap.keySet()) {
-                System.out.println("restaurant : " + restaurant + ", count : " + reviewMap.get(restaurant));
+        Result<List<Restaurant>> resultReview = reviewService.getTop4Reviews();
+        if (resultReview.isSuccess()) {
+            for (Restaurant restaurant : resultReview.getRtnObj()) {
+                System.out.println("restaurant : " + restaurant);
             }
+            model.addAttribute("top4ReviewRestaurants", resultReview.getResultObject());
         }
-*/
 
         return "main";
     }

@@ -101,41 +101,16 @@
                     리뷰 Top 4
                 </div>
                 <div class = "contentBox_parent">
-                    <div class = "contentBox_category">
-                        <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
-                            <div class = "category_name" >
-                                <p>비건</p>
+                    <c:forEach var="restaurant" items="${top4ReviewRestaurants}">
+                        <div class = "contentBox_category"  onclick="location.href='/restaurant/${restaurant.id}'">
+                            <div class = "category_box">
+                                <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
+                                <div class = "category_name" >
+                                    <p>${restaurant.name}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class = "contentBox_category">
-                        <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
-                            <div class = "category_name" >
-                                <p>유아 동반</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "contentBox_category">
-                        <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
-                            <div class = "category_name">
-                                <p>독립공간</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class = "contentBox_category">
-                        <div class = "category_box">
-                            <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">
-                            <div class = "category_name">
-                                <p>반려동물 동반</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    </c:forEach>
                 </div>
             </div>
             <div class = "contentBox_wide"  >
@@ -143,7 +118,7 @@
                     별점 Top 4
                 </div>
                 <div class = "contentBox_parent">
-                    <c:forEach var="restaurant" items="${restaurants}">
+                    <c:forEach var="restaurant" items="${top4StarRestaurants}">
                         <div class = "contentBox_category" onclick="location.href='/restaurant/${restaurant.id}'">
                             <div class = "category_box">
                                 <img src = "https://cdn-icons-png.flaticon.com/512/4163/4163717.png" alt="" style = "max-width: 100%;">

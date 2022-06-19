@@ -5,14 +5,13 @@ import com.example.alpha.common.ResultCode;
 import com.example.alpha.entity.Restaurant;
 import com.example.alpha.entity.Review;
 import com.example.alpha.repository.ReviewRepository;
-
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 @Service
 public class ReviewService {
@@ -61,19 +60,20 @@ public class ReviewService {
     }
 
 
-    public Result<Map<Restaurant, Long>> getTop4Reviews() {
+    public Result<List<Restaurant>> getTop4Reviews() {
         try {
-
-            List<String> temp = reviewRepository.findGroupBy();
-            for (String a : temp) {
-                System.out.println("a : " + a);
+            List<Map<String, Object>> temp = reviewRepository.findGroupBy();
+            List<Restaurant> restaurants = new ArrayList<>();
+            for (Map<String, Object> a : temp) {
+                Integer restaurantId = (Integer) a.get("restaurant_id");
+                Result<Restaurant> restaurantResult = restaurantService.getRestaurant(restaurantId);
+                if (restaurantResult.isNotSuccess()) {
+                    continue;
+                }
+                Restaurant restaurant = restaurantResult.getResultObject();
+                restaurants.add(restaurant);
             }
-
-/*
-            List<Review> reviews = reviewRepository.findAll();
-            Map<Restaurant, Long> map = reviews.stream().collect(Collectors.groupingBy(Review::getRestaurant, Collectors.counting()));
-            return ResultCode.Success.result(map);*/
-            return ResultCode.Success.result();
+            return ResultCode.Success.result(restaurants);
         } catch (Exception e) {
             return ResultCode.DBError.result();
         }
