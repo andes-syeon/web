@@ -149,13 +149,13 @@ a.now{
 .contentBox_category {
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
     padding: 20px;
     width: 250px;
     height: 370px;
-    border: 1px solid darkgrey; position:relative;
+    border: 1px solid darkgrey;
+    position: relative;
+
 
 }
 .contentBox_category .category_box {
@@ -169,57 +169,4 @@ a.now{
     text-align: center;
     font-size: 25px;
 
-}
-
-
-.contentBox_left{
-    /*background-color: palegoldenrod;*/
-    /*width: calc(60% - 30px);*/
-    float: left;
-    width: calc(60%);
-    border-left: 40px;
-}
-.contentBox_right{
-    margin-top: 30px;
-    float: right;
-    width: calc(40%);
-    /*background-color: purple;*/
-}
-.contentBox_right_img{
-    padding-left: 17%;
-}
-.contentBox_right_img img{
-    width: 80%;
-    box-shadow: 5px 5px 5px #606167;
-}
-
-.contentBox_smallTitle{
-    /*margin: 0 0 25px;*/
-    font-size: 27px;
-    font-family: "NanumSquare";
-    color: #424242;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: -.1px;
-    padding: 0;
-    margin-top: 12px;
-}
-.contentBox_info{ /*프로젝트 설명*/
-    margin-top: 40px;
-    margin-bottom: 40px;
-    /*background-color: yellow;*/
-    /*content: '';
-    display: block;
-    clear: both;*/
-}
-.info_text_more summary{ /*프로젝트 설명 '더보기'*/
-    font-size: 15px;
-}
-.info_text_more p{
-    font-size: 18px;
-    font-family: "NanumSquare";
-    color: #606167;
-    line-height: 1.8;
-    letter-spacing: -.1px;
-    padding: 0;
 }

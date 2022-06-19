@@ -32,7 +32,7 @@
         <div class="tit_location" id="#top" align="center" style="margin-top: 150px; margin-bottom: 0px;"> ${restaurant.originalName}</div>
     </div>
 
-    <table style="margin-top: -50px; width: 11%" align="center">
+    <table style="margin-top: -50px; width: 15%" align="center">
         <tr>
             <td style="width: 50%">
                 <div style="float: left; margin-left: 15px; margin-right: 5px;">
